@@ -10,18 +10,13 @@ Translations:
     Assassin:
       RoleName: Assassin
       Description: >-
-        The Assassin is an Impostor that can also kill other players by guessing their roles. If the Assassin is able to successfully guess a player's role, then that player will be eliminated.
+        The Assassin is an Impostor that can also kill non-Impostors by guessing their roles. You cannot guess any Impostor role.
 
+        While in meeting, you can select a player they want to guess by voting for them. After voting, you can use a chat command (/cmd [rolename]) to select the role you wish to guess.
 
-        While in meeting, the Assassin can select a player they want to guess by voting for them. After voting, the Guesser must use their Shapeshift Menu to select the role they wish to guess. If the Assassin correctly guesses both the player and their role, then that player will die.
+        To finish the guess, vote the player again to confirm everything is correct. If the guess is correct, the guessed player will die, otherwise the Assassin will die.
 
-        Due to limitations, some of the available guessing options will be sent in the chat.
-        
-        If the Assassin misguesses they will suicide. 
-
-
-        To skip guessing, you may skip first before voting for a player.
-
+        To cancel guessing, you can skip at any time and your next vote will be normal.
 
         Note: Revealed roles (e.g. from Oracle) are unable to be guessed.
       Blurb: Kill & Guess Players' Roles
@@ -199,6 +194,7 @@ Translations:
         ImpostorsCanSeeManipulated: Impostors::0 Can See Manipulated
         TimeUntilSuicide: Time Until Suicide
         ManipulationCooldown: Manipulation Cooldown
+        KillerCDAfterManipulate: Killer CD after Manipulate
       ManipulatedText: Manipulated
       KillImploredText: >-
         You <b>MUST</b> Kill Someone In {0}
@@ -242,6 +238,9 @@ Translations:
       Description: Use the Kill button next to a player to gain control over them. The controlled player will then be forced to kill the next non-Impostor they come near.\n\nIf the killed player has an ability that activates upon death, the effect will land on the controlled player instead of the Puppeteer. The Puppeteer cannot kill normally.
       Blurb: Use Players As Your Puppets
       ButtonText: Puppet
+      Options:
+        PuppetCooldown: Puppet Cooldown
+        KillerCDAfterPuppet: Killer CD after Puppet
     SerialKiller:
       RoleName: Serial Killer
       Description: >-
@@ -779,18 +778,13 @@ Translations:
       RoleName: Vigilante
       Blurb: Guess Impostor Roles to Kill
       Description: >-
-        The Vigilante is a Crewmate that can kill Impostors and Neutrals by guessing the players and their roles. If the Vigilante is able to successfully guess a non-Crewmate's role, then that player will be eliminated.
+        The Vigilante is a Crewmate that can kill Impostors and Neutrals by guessing the players and their roles. You are not able to guess Crewmate roles.
 
+        While in meeting, you can select a player they want to guess by voting for them. After voting, the Vigilante can use a chat command (/cmd [rolename]) to select the role you wish to guess.
 
-        While in meeting, the Vigilante can select a player they want to guess by voting for them. After voting, the Vigilante must use their Shapeshift Menu to select the role they wish to guess. If the Vigilante correctly guesses both the player and their role, then that player will die.
+        To finish the guess, vote the player again to confirm everything is correct. If the guess is correct, the guessed player will die, otherwise the Vigilante will die.
 
-        Due to limitations, some of the available guessing options will be sent in the chat.
-
-        If the Vigilante misguesses, they will suicide. The Vigilante is not able to guess Crewmate roles. 
-
-
-        To skip guessing, you may skip first before voting for a player.
-
+        To cancel guessing, you can skip at any time and your next vote will be normal.
 
         Note: Revealed roles (e.g. from Oracle) are unable to be guessed.
       SelectPlayer: 'You have selected to kill:'
@@ -1038,6 +1032,7 @@ Translations:
       Options:
         GulpCooldown: Gulp Cooldown
         AllowEscapeFromPelican: Allow Escape from Pelican
+        SpawnBodiesOnPelican: Spawn Bodies on Pelican when Meeting
       GulpedStatistic: Players Gulped
       DeathName: Swallowed
       ButtonText: Swallow
@@ -1055,7 +1050,18 @@ Translations:
       ButtonText: Kill
     Pirate:
       RoleName: Pirate
-      Description: The Pirate is a Neutral Guesser that can kill players by guessing their roles. If the Pirate is able to successfully guess a player's role, then that player will be eliminated.\n\nWhile in meeting, the Pirate can select a player they want to guess by voting for them. They can then select a role to guess by opening the Shapeshifter Menu. Note that due to limitations, some role options may not be shown in the menu, but will be sent in the chat.\n\nIf the Pirate correctly guesses both the player and their role, then that player will die. The Pirate will need to guess a certain number of players (depending on settings) correctly in order to win.
+      Description: >-
+        The Pirate is a Neutral Guesser that can kill players by guessing their roles. If the Pirate is able to successfully guess a player's role, then that player will be eliminated.
+
+        While in meeting, you can select a player they want to guess by voting for them. After voting, you can use a chat command (/cmd [rolename]) to select the role you wish to guess.
+
+        To finish the guess, vote the player again to confirm everything is correct. If the guess is correct, the guessed player will die, otherwise the Pirate will die.
+
+        The Pirate needs a certain amount of guesses to win, determined by the host. The Pirate may not die on misguess depending on host settings, but they won't be able to guess again for the rest of the round.
+
+        To cancel guessing, you can skip at any time and your next vote will be normal.
+
+        Note: Revealed roles (e.g. from Oracle) are unable to be guessed.
       Blurb: Guess Players' Roles
       Options:
         GuessWinAmount: Pirate Guess Win Amount
@@ -1196,14 +1202,12 @@ Translations:
       Description: >-
         Gives any role the ability to guess. Guessers have the ability to guess players' roles to eliminate them.
 
- 
-        While in meeting, a guesser can select a player they want to guess by voting for them. After voting, the Guesser must use their Shapeshift Menu to select the role they wish to guess. 
 
-        Due to limitations, some of the available guessing options will be sent in the chat.
+        While in meeting, a guesser can select a player they want to guess by voting for them. After voting, the Guesser can use a chat command (/cmd [rolename]) to select the role you wish to guess.
 
-        If the guess is correct, the guessed player will die, otherwise the guesser will die on misguess.
+        To finish the guess, vote the player again to confirm everything is correct. If the guess is correct, the guessed player will die, otherwise the guesser will die.
 
-        To skip guessing, you may skip first before voting for a player.
+        To cancel guessing, you can skip at any time and your next vote will be normal.
 
         Note: Revealed roles (e.g. from Oracle) are unable to be guessed.
       Blurb: Guess Players' Roles
@@ -1219,17 +1223,11 @@ Translations:
         SubroleSetting: Can Guess Subroles::0
         RestrictedToNonVote: Restricted to Non Vote-Related Roles
         FollowGuesserSettings: Follow Guesser Settings
+      GuesserTitle: Guesser
+      UnknownRole: Unknown role {0}. You can type '/cmd available' to view all roles your are able to guess.
       HintMessage: You have {0} guess(es) left. Vote the player you want to try to guess.
       NoGuessesLeft: You have ran out of guesses. Your next vote now acts as normal.
       SkippedGuessing: You have exited guessing mode. Your next vote now acts as normal.
-      KickedFromGuessing: You took too long to make a choice. You have been kicked from guessing.
-      MoreTimeGiven: You made a choice. The timer has been reset.
-      PageIndex: Page {0}/{1}
-      RowText: 'Row {0}: '
-      ShifterMenuHelpText: >-
-        The extra options on the Shapeshifter menu appear as another player.
-
-        Below is the correct text that should be displayed:
       GuessDeathAnnouncement: >-
         A guesser has made a guess.
 
@@ -1241,12 +1239,7 @@ Translations:
         You are attempting to guess {0} as {1}. To confirm this guess, vote that player again.
 
         Otherwise, vote another player to reset the process.
-      PickedPlayerText: >-
-        You have selected to guess {0}. You have now been given the shapeshift menu. The roles in the menu are alphabetical order and roles you cannot guess have already been filtered out.
-
-        If you cannot find a role, the host has disabled it or your role is preventing you from guessing it.
-
-        If you take too long to click a button in the menu, the shapeshifter menu will be taken away and you'll have to vote the player again.
+      PickedPlayerText: You have selected to guess {0}. To select a role, type `/cmd [rolename]`. This command will be hidden from other players.
     LastResort:
       RoleName: Last Resort
       Description: As the Last Resort, you can vote yourself to gain extra votes for the rest of the match. This vote is canceled and you are able to vote anyone else after this.\n\nThe drawback is that your role is now revealed to the public for everyone to see.
@@ -1369,6 +1362,7 @@ Translations:
         CurrentLocation: Current
         RandomLocation: Random
         KillRadius: Kill Radius
+        OnlyKillUnalliedPlayers: Only Kill Unallied Players
       RoleName: Duplicator
       Blurb: Duplicate yourself
       TrickedCauseOfDeath: Tricked
@@ -1412,6 +1406,10 @@ Translations:
       OvertimeDeathMessage: The host has enabled <b>'Sudden Death'</b> on Overtime, which means that respawning is disabled.
       CaptureButtonText: Capture
       TakeButtonText: Take
+      GracePeriodTime: >-
+        Invincibility Leaving
+
+        in: {0}
     Jailor:
       Options:
         JailCooldown: Jail Cooldown
@@ -1468,6 +1466,10 @@ Translations:
       RoleName: Viper
       Blurb: Kill to dissolve bodies
       Description: The Viper is an Impostor role that dissolves players' bodies after killing them. Once a certain amount of time has passed the body will disappear completely and can no longer be reported. There are 3 stages of dissolution, and the time it takes to completely disappear is determined by host.
+    Drafter:
+      RoleName: Drafter
+      Blurb: Choose your next role
+      Description: At the start of the game, the Drafter can choose their role from a selection of roles. This role only spawns in the Draft gamemode.
   StaticOptions:
     AutoKick: AutoKick
     EnableGM: Host GM
@@ -1717,6 +1719,12 @@ Translations:
       Hint: There is currently an active poll, you can vote using <b>/gmpoll vote</b>.
       AvailableModesTitle: Available Gamemodes
       CurrentStandingsTitle: Current Standings
+    OldCommandWarning: >-
+      You are using a deprecated command!
+
+      Every command has changed to use '/cmd' in front. For example, you typed: '/{0}'. The correct command should be '/cmd {0}'.
+
+      You have been warned for now, but this deprecated command will stop working sometime in March.
   Announcements:
     SystemMessage: System Message
     CannotSabotageMessage: The host has disabled dead players from sabotaging.
@@ -1734,6 +1742,7 @@ Translations:
       PlayerSuicide: Suicided
   PingDisplay:
     AddonsLoaded: Addons Loaded
+    AddonsFailed: '{0} Addon(s) Failed to Load: {1}'
   Gamemodes:
     Colorwars:
       Options:
@@ -1979,17 +1988,35 @@ Translations:
         NeutralTab: Neutral Settings
         MiscTab: Misc Settings
         HiddenTab: Hidden
-        GamemodeDescription: This text is shown to players when they join to explain the current gamemode.
+        GamemodeDescription: The Standard Among Us gameplay. Crewmates complete tasks and vote out the killers, while the Impostors and the Neutral Killers try to win for their respective teams.
       CaptureTheFlag:
         Name: Capture The Flag
         ButtonText: CTF Settings
         Description: Change anything about CTF here!
-        GamemodeDescription: This text is shown to players when they join to explain the current gamemode.
+        GamemodeDescription: The standard Capture The Flag. Players must capture the opposing team's flag and return it to their base to score points. If you're hit, you will respawn after a short amount of time. After respawning, you will also be invincible for some time until it runs out or you kill a player.
       Colorwars:
         Name: Colorwars
         ButtonText: Colorwars Settings
         Description: Modify the Colorwars settings here!
-        GamemodeDescription: This text is shown to players when they join to explain the current gamemode.
+        GamemodeDescription: Players are divded into teams and are assigned random colors.\nIf Convert Color Mode is enabled, trying to kill a player will change their color to yours. The game will end when there is only one color remaining. If Sudden Death is one, once the number of colors remaining dips to a number decided by the host, players will start killing each other instead of converting them.\n\nIf Convert Color Mode is disabled, players must kill players of other colors to eliminate them. The game will end when only one color remains.
+      Draft:
+        Name: Draft
+        ButtonText: Draft Settings
+        Description: Modify the Draft gamemode settings here!
+        RoleChoiceCount: Role Choice Count
+        DraftTitle: Draft GameMode
+        RandomOption: Random
+        PlayerEndTurn: Player {0} has chose {1}.
+        PlayerSwapChoice: 'Your decision is now: {0}. Skip to confirm.{1}'
+        PlayerChoiceOptions: >-
+          Your options to choose between from are: {0}
+
+          Vote any player to change your selection.
+        PlayerStartsTurn: Player {0} is now choosing their role. They have {1} seconds to make a decision before random is picked automatically.
+        GamemodeDescription: This a variation of the Standard GameMode. Any role in Standard GameMode can be used here.\n\nThis gamemode works like standard where it will first pick all the roles that should be assigned. However, it doesn't assign them, it instead just adds them to a list. At the start of the game, a meeting will be called. In this meeting, you will recieve a message with a number, your custom ID. Each player (starting from the lowest (1) to the amount of players) will take turns choosing a role from a random selection of roles out of the list. (The amount of roles to choose from is decided by host.) You can vote any player to change your selection. If you don't like the picked roles, theres always an extra option labeled "Random". This option picks any role that is still in the list and hasn't been picked yet. When you're satifisfied with your selection, you can skip your vote to confirm it. If you don't pick a role in time, random will be picked automatically for you. The option you picked will be announced in chat. Everyone will know that this role was picked but they won't know who got it.\n\nAfter all players have picked their roles, the meeting will end and the game will start as normal.
+        DecisionTime: Decision Time
+        StartingInText: Starting In {0}...
+        PlayerIdText: Your ID is {0}. Wait for your turn.
     CaptureTheFlag:
       SectionTitle: CTF Settings
       GameLength: Game Duration
@@ -1999,6 +2026,7 @@ Translations:
       OvertimeOnTies: Overtime on Ties
       OvertimeLength: Overtime Duration
       SuddenDeath: Sudden Death
+      InvincibilityDuration: Invincibility Duration After Death
     Colorwars:
       SectionTitle: Colorwars Settings
       TeamSize: Team Size
@@ -2156,7 +2184,3 @@ Translations:
       The following enabled roles require pet: {1}
     WarningToPlayer: There are roles enabled that have pets. Please equip one in the cosmetics area.
     WarningTitle: ⚠ WARNING ⚠
-
-
-
-
